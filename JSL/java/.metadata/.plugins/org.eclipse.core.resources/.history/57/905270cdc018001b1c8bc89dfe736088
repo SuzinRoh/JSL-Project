@@ -1,0 +1,126 @@
+import java.io.*;
+import java.util.*;
+
+class Student implements Serializable{
+	private int num;
+	private String name;
+	private int kor;
+	private int mat;
+	private int eng;
+	
+	Student(int num,String name,int kor,int mat,int eng){
+		this.num=num;
+		this.name=name;
+		this.kor=kor;
+		this.mat=mat;
+	}
+	
+	@Override
+	public String toString() {
+		return  num + "\t" + name + "\t\t" + kor + "\t" + mat + "\t" + eng ;
+	}
+	
+	@Override
+	public int hashCode() {
+		
+		return num;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Student ) {
+			Student s=(Student)obj;
+			return num==num;
+		}else {
+			return false;
+		}
+	}
+
+	
+}
+public class Exam_01 {
+
+	public static void main(String[] args) throws Exception{
+		Set<Student> set =new HashSet<Student>();
+		File f=new File("//Volumes//SUJIN//student1028.dat");
+		if(f.exists()) {
+	
+				FileReader fr= new FileReader(f);
+				BufferedReader br_f = new BufferedReader(fr);
+				
+				String line="";
+				while((line=br_f.readLine())!=null) {
+					StringTokenizer lineSt =new StringTokenizer(line,",");
+					int num=Integer.parseInt(lineSt.nextToken());
+					String name=lineSt.nextToken();
+					int kor=Integer.parseInt(lineSt.nextToken());
+					int mat=Integer.parseInt(lineSt.nextToken());
+					int eng=Integer.parseInt(lineSt.nextToken());
+					
+					set.add(new Student(num,name,kor,mat,eng));
+				
+			}
+		}else {
+			System.out.println("Create New File.");
+			f.createNewFile();
+		}
+		Scanner s=new Scanner(System.in);
+		BufferedReader br1 =new BufferedReader(new InputStreamReader(System.in));
+		while(true) {
+			System.out.println("메뉴를 선택하시오.");
+			System.out.println("[1] 학생등록");
+			System.out.println("[2] 전체출력");
+			System.out.println("[3] 종료");
+			String selectNum=s.next();
+			
+			switch(selectNum) {
+				case "1":
+					while(true) {
+					
+							System.out.print("번호,이름,국어,수학,영어 입력 :");
+							String tmpInputString=br1.readLine().trim();
+							if(tmpInputString.contains("-99"))
+								break;
+							
+							StringTokenizer st=new StringTokenizer(tmpInputString,",");
+							
+							int num=Integer.parseInt(st.nextToken());
+							
+							String name=st.nextToken();
+							int kor=Integer.parseInt(st.nextToken());
+							int mat=Integer.parseInt(st.nextToken());
+							int eng=Integer.parseInt(st.nextToken());
+							Student student =new Student(num,name,kor,mat,eng);
+							if(!set.isEmpty()) {
+								if(set.contains(student)) {
+									System.out.println("이미 입력된 번호입니다.");
+									continue;
+								}
+							}
+							set.add(student);
+							
+			
+					}
+					continue;
+				case "2":
+					Iterator<Student> it=set.iterator();
+					System.out.println("번호\t이름\t국어\t수학\t영어\t총점\t평균");
+					while(it.hasNext()) {
+						System.out.println(it.next());
+					}
+					continue;
+				case "3":
+					FileOutputStream fos=new FileOutputStream(f);//파일 연결
+					BufferedOutputStream bos =new BufferedOutputStream(fos);
+					ObjectOutputStream oos=new ObjectOutputStream(bos);
+					
+					oos.writeObject(set);
+					System.out.println("시스템 종료.");
+					System.exit(0);
+					break;
+			}
+		
+		}
+	}
+
+}

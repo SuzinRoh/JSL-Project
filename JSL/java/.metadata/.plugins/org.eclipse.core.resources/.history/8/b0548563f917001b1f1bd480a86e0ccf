@@ -1,0 +1,54 @@
+package example04;
+/*키보드로 이름, 전화, 나이를 입력받아서 person객체 생성 파일로 출력하는 프로그램
+ * [입력형식]
+ *  [1]등록
+ *  [2]전체보기(화면출력)
+ *  [3]종료
+ * 	메뉴 선택[1~3]?
+ * 
+ * 	[1]선택시
+ * 	등록 :홍길동,010-1111-1111,28
+ * 	
+ * 	[2]선택시
+ * 	이름  전화  나이
+ * 	 .   .   .
+ * 	
+ * 나중에 불러올때 저장된 데이터 살아있어야함
+ * 그후 새로 등록할때 추가
+ * 종료>저장하고 끝남 
+ * 파일먼저 불러오고 >리스트에 넣고 , 그후 추가된걸 다시 저장
+ * 
+ * ㅠㅏ일에 저장하는건 마지막
+ */
+import java.util.*;
+import java.io.*;
+public class Exam_05 {
+
+	public static void main(String[] args) {
+		List<Person> list =new ArrayList<Person>();
+		FileReader fr=new FileReader("E://person.txt");
+		if(fr=new r) {//파일이 존재하면 리스트에 저장
+			list.add((Person)f);
+		}else {
+			f=new File("E://person.txt");
+		}
+		while(true){
+			System.out.println("메뉴를 선택하시오.");
+			System.out.println("[1] 등록");
+			System.out.println("[2] 전체보기");
+			System.out.println("[3] 종료");
+			
+			Scanner sc=new Scanner(System.in);
+			String select=sc.next();
+			switch(select){
+				case "1":
+					continue;
+				case "2":
+					continue;
+				case "3":
+					break;
+			}
+		}
+	}
+
+}

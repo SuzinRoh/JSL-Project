@@ -1,0 +1,24 @@
+@FunctionalInterface
+interface MySum{
+	public int add(int x,int y);
+}
+import java.util.*;
+public class Exam_06 {
+
+	public static void main(String[] args) {
+		/*키보드로 x,y를 입력 받아서 
+		 *  x~y의 소수의 갯수를 리턴
+		 */
+		Scanner sc=new Scanner(System.in);
+		int X=sc.nextInt();
+		int Y=sc.nextInt();
+		
+		MySum ms;
+		
+		ms=(x,y)->{
+			
+		};
+		System.out.println(ms.add);
+	}
+
+}

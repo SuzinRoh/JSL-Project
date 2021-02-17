@@ -1,0 +1,24 @@
+--구직자 고객번호
+create sequence tb_user_seq_user_num;
+
+--자기소개서 자기소개서번호
+create sequence tb_user_letter_seq_cover_num;
+
+--구직자이력서 이력서번호
+create sequence tb_user_resume_seq_resume_num;
+
+--구직자포트폴리오 포트폴리오번호
+create sequence tb_portfolio_seq_port_num;
+
+--구직자의구직신청 구직신청번호
+create sequence tb_job_application_seq_ja_num;
+
+--관리자 관리자번호
+create sequence tb_admin_seq_admin_num;
+
+--기업 기업번호
+create sequence tb_company_seq_com_num;
+
+--기업구직공고 공고번호
+create sequence tb_job_opening_seq_opening_num;
+delete sequence tb_job_opening_seq_com_num;

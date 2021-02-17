@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Make list</h2>
+	<ol type="a">
+		<li>ji</li>
+		<li>ji</li>
+		<li>ji</li>
+		<li>ji</li>
+	</ol>
+	
+	<ul>
+		<li>ji</li>
+		<li>ji</li>
+		<li>ji</li>
+		<li>ji</li>
+	</ul>
+</body>
+</html>

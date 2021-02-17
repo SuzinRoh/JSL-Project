@@ -1,0 +1,27 @@
+package example01;
+import java.io.*;
+import java.util.*;
+/*출력
+ * 번호 이름 국어 영어 수학 총점 평균
+ * 
+ * 
+ */
+public class Exam_01 {
+
+	public static void main(String[] args) throws Exception{
+		Scanner sc = new Scanner(new File("E:\\student.txt"));
+		String data = null;
+		int[] num=new int[3];
+		int cnt=1;
+		while(sc.hasNext()) {
+			data = sc.nextLine();
+			String[] tmp =data.split(",");
+			num[0]=Integer.parseInt(tmp[3]);
+			num[0]=Integer.parseInt(tmp[4]);
+			num[0]=Integer.parseInt(tmp[5]);
+	
+			
+		}
+	}
+
+}

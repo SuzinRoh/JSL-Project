@@ -1,0 +1,12 @@
+import java.io.*;
+public class Exam_07 {
+
+	public static void main(String[] args) throws Exception {
+		DataInpuStream dis =
+				new DataInputStream(
+						new BufferedInputStream(
+								new File("E:\\abc.txt")))
+
+	}
+
+}

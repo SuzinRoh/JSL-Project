@@ -1,0 +1,75 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body{
+		margin:0;
+		padding:0;
+		width:100%;
+		
+	}
+	table{
+		text-align:center;
+		width:100%;
+		border:1px solid black;
+	}
+	td{
+		text-align:center;
+		border:1px solid darkgray;
+	}
+	th{
+		font-size:30px;
+	}
+	
+
+</style>
+</head>
+<body>
+	<h2>이력서</h2>
+	<table>
+		<tr>
+		<th>이&#x2000;력&#x2000;서</th>
+		</tr>
+		<tr><!--first-->
+			<td rowspan="5">사진</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+		</tr>
+			
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+		</tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+		</tr>
+		
+	
+	</table>
+</body>
+</html>

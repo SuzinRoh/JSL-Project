@@ -1,0 +1,14 @@
+import java.io.*;
+public class Exam_08 {
+
+	public static void main(String[] args) {
+		File f= new File("E:\\abc.txt");
+		FileWriter fw = new FileWriter(f);
+		BufferedWriter bw =new BufferedWriter(fw);
+		PrintWriter pw = new PrintWriter(bw);
+		
+		pw.print("AAA");
+		pw.print("DDD");
+	}
+
+}

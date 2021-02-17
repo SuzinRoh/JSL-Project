@@ -1,0 +1,17 @@
+ import java.io.*;
+public class Exam_01 {
+
+	public static void main(String[] args) {
+//		폴더 생성 
+		File file =new File("E:\\java\\work");
+		boolean bool = file.exists();
+		System.out.println(bool);
+		if(!bool) {
+			System.out.println(bool);
+			file.mkdir();
+			
+		}
+		
+	}
+
+}

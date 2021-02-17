@@ -1,0 +1,15 @@
+/*
+ * 키보드로 번호 이름 국어 영어 수학 입력 받아서 총점평균을 구하여 출력
+ * 입력형식
+ * 입력:1,김학생,90,88,95
+ * 
+ * 입력:-99 종료
+ */
+public class Exam_10 {
+
+	public static void main(String[] args) throws Exception{
+
+		File f=new File("E:\\d.txt")
+	}
+
+}

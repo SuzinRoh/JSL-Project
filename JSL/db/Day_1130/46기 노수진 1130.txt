@@ -1,0 +1,85 @@
+
+--3
+select indate,contents,expenditure from accountbook where expenditure >5000;
+
+--4
+select indate,contents,income from accountbook where income = 2500000;
+
+--5
+insert into accountbook(indate,kategorie,contents,income,expenditure)
+values('2020/02/25','주거비','3월분 월세',0,300000);
+
+--6
+update accountbook set contents = '카페라떼 구매' where indate='20200203';
+
+--7
+insert into accountbook(indate,kategorie,contents,income,expenditure)
+values('2020/02/20','통신비','휴대전화 요금',0,28000);
+
+--8
+insert into accountbook(indate,kategorie,contents,income,expenditure)
+values('2020/02/28','오락비','영화관람',0,12000);
+
+--9
+insert into accountbook(indate,kategorie,contents,income,expenditure)
+select '2020/03/01',kategorie,contents,income,expenditure
+from accountbook ;
+
+commit;
+
+--10
+update accountbook set indate= indate+(interval '1' day)
+where extract(month from indate) in(3);
+
+--11
+update accountbook set contents='4월분 월세' 
+where extract(month from indate) in(3) and contents ='3월분 월세';
+
+--12
+update accountbook set contents=
+replace(contents,'1월','2월')
+where contents like '1월%';
+
+--13
+select extract(month from indate),sum(income),sum(expenditure)
+from accountbook
+group by extract(month from indate);
+
+--14
+select extract(month from indate),avg(income),avg(expenditure)
+from accountbook
+group by extract(month from indate);
+
+select kategorie,avg(income),avg(expenditure)
+from accountbook
+group by kategorie;
+
+--15
+create table kategorie(
+kategorieid number(10),
+kategoriename varchar(20));
+
+--16
+insert into kategorie(kategorieid,kategoriename)
+select distinct decode(kategorie,
+                '급여',1,
+                '식비',2,
+                '주거비',3,
+                '수도광열비',4,5),
+decode(kategorie,
+            '급여','급여',
+            '식비','식비',
+            '주거비','주거비',
+            '수도광열비','공과금','기타')
+           from accountbook ;
+--17
+alter table kategorie drop column kategorieid ;
+alter table kategorie add kategorieid varchar(10);
+alter table kategorie modify kategorieid number(1);
+
+--18
+--??
+--19
+alter table accountbook drop column kategorie;
+--20
+drop table accountbook cascade constraints;

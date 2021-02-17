@@ -1,0 +1,21 @@
+package example01;
+import java.io.*;
+import java.util.*;
+//입출력 스트림을 이용한 성적처리
+/*
+ * 
+ */
+public class Exam_02 {
+
+	public static void main(String[] args) {
+		BufferedReader br=new BufferedReader()
+				new FileReader(
+						new File()));
+		
+		while(true) {
+			
+		}
+				
+	}
+
+}

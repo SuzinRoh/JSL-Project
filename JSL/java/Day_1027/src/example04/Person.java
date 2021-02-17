@@ -1,0 +1,15 @@
+package example04;
+
+public class Person {
+	private String name;
+	private String phone;
+	private int age;
+	
+	Person(){}
+	Person(String name,String phone,int age){
+		this.name=name;
+		this.phone=phone;
+		this.age=age;
+	}
+	
+}

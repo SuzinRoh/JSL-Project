@@ -1,0 +1,18 @@
+package example02;
+import java.io.*;
+//객체 입출력
+/*
+ * 
+ */
+class Point{
+	int x;
+	int y;
+}
+public class Exam_03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

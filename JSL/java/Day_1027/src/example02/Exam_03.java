@@ -1,0 +1,52 @@
+package example02;
+import java.io.*;
+import java.util.*;
+//객체 입출력
+/*
+ * 
+ */
+class Point implements Serializable{//객체를 입출력 >객체 직렬화 해줘야함 >결론 클래스를 직렬화
+	int x;
+	int y;
+	
+	Point(){}
+	public Point(int x,int y) {
+		this.x=x;
+		this.y=y;
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "x="+x+" y="+y;
+	}
+}//파일에 오브젝트를 저장
+//file > fileoutputstream > bufferedoutputstream
+//objectoutputstream > writeobject() < 이걸통해 최종적으로 파일에 저장됨
+public class Exam_03 {
+	public static void main(String[] args) throws Exception{//작은 ㅇㅖ외부터 큰거로 가야함 
+		List<Point> list =new ArrayList<Point>();
+		Point p1 =new Point(10,20);
+		
+		System.out.println(p1);
+		
+		File f =new File("E:\\outobject.txt");//파일생성
+		FileOutputStream fos=new FileOutputStream(f);//파일 연결
+		BufferedOutputStream bos =new BufferedOutputStream(fos);
+		ObjectOutputStream oos=new ObjectOutputStream(bos);
+		
+		
+		list.add(p1);
+		list.add(new Point(100,200));
+		list.add(new Point(30,40));
+		
+		oos.writeObject(list);
+		//	oos.writeObject(p1);
+		//oos.writeObject(new Point(100,200));
+		//oos.writeObject(new Point(30,40));
+		
+
+		oos.close();
+	}//객체 직렬화를 해줘야함
+	
+
+}

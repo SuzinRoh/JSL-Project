@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+ 	div{
+ 		background-color:skyblue;
+ 		padding:20px;
+ 	}
+ 	body{
+ 		 	
+ 		}
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+/*<link type="text/css" rel="stylesheet" herf="">*/
+</head>
+<body>
+	<h2>DIV Test</h2>
+	
+	<div>
+		hi
+		<span style="color:red"> jsl hrd </span>
+		<span> 2교시 수업</span>
+	</div>
+	<div>
+		<p>수업종료</p>
+		
+		<a href="http://www.naver.com">never</a>
+		<br>
+		<a href="exam_01.jsp" alt="링크에요">j</a>
+	</div>
+</body>
+</html>

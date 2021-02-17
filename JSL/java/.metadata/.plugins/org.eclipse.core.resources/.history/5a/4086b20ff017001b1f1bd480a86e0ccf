@@ -1,0 +1,39 @@
+package example02;
+import java.io.*;
+import java.util.*;
+//객체 입출력
+/*
+ * 
+ */
+class Point{
+	int x;
+	int y;
+	
+	Point(){}
+	public Point(int x,int y) {
+		this.x=x;
+		this.y=y;
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "x="+x+" y="+y;
+	}
+}
+//file > fileoutputstream > bufferedoutputstream
+//objectoutputstream > writeobject() < 이걸통해 최종적으로 파일에 저장됨
+public class Exam_03 {
+	public static void main(String[] args) {
+		Point p1 =new Point(10,20);
+		
+		System.out.println(p1);
+		
+		File f =new File("E:\\outobject.txt");//파일생성
+		FileOutputStream fos=new FileOutputStream(f);//파일 연결
+		BufferedOutputStream bos =new BufferedOutputStream(fos);
+		ObjectOutputStream oos=new ObjectOutputStream(bos);
+		
+		
+	}
+
+}

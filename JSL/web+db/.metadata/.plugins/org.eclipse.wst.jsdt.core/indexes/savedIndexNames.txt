@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+/Users/sujin/Desktop/es46/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2802914954.index
+1251668170.index
+3151704117.index
+2667071562.index
+239556059.index
+2034263373.index
+3461135873.index
