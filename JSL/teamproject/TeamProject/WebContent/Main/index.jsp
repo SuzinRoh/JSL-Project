@@ -67,7 +67,16 @@
 /* } */
 </style>
 </head>
-
+<script>
+	function search_post() {
+		if(search.key.value == ""){
+			alert("검색어가 등록되지 않았습니다.");
+			search.key.focus();
+			return;
+		}
+		search.submit();
+	}
+</script>
 <body>
 
 	<!-- ======= Top Bar ======= -->
@@ -477,7 +486,7 @@
 					
 					<div class="col-lg-12">
 						<ul id="portfolio-flters">
-							<li ><input type=text><button>검색</button></li>
+							<li ><form name = search method = post action = "Job_opening?cmd=job_opening_list"><input type=text name = key></form><button onClick = javascript:search_post()>검색</button></li>
 <!-- 							<li data-filter="*" class="filter-active">All</li> -->
 <!-- 							<li data-filter=".filter-app">App</li> -->
 <!-- 							<li data-filter=".filter-card">Card</li> -->
@@ -489,18 +498,17 @@
 				<div style="display:flex;flex-wrap: wrap;width:100%;justify-content: center;/*justify-content: space-around;*/!important">
 				<c:forEach var="company" items="${list}" begin="0" end="4">
 					<ul style="   list-style:none;">
-						<li><div class="opening_companyInfo" onclick="location.href='/Job_opening?cmd=company_job_opening_detail&num=${company.getCom_num()}'" style="display:flex; justify-content: space-evenly;align-items: center;align-content:center;box-shadow: 5px 5px 10px 1px rgba(10,10,10,0.2);width:330px;height:150px;background-color: #ffffff;/*border:solid 1px #282a52;*/padding:10px;
+						<li><div class="opening_companyInfo" onclick="location.href='/Job_opening?cmd=company_job_opening_detail&num=${company.getOpening_num()}'" style="display:flex; justify-content: space-evenly;align-items: center;align-content:center;box-shadow: 5px 5px 10px 1px rgba(10,10,10,0.2);width:330px;height:150px;background-color: #ffffff;/*border:solid 1px #282a52;*/padding:10px;
 						border-radius:5px;text-align:center;">
 								
-							<div class=opening_comimage style="flex-shrink:0;width:30px;height:30px;"><!-- <img style="width:30px;height:30px;" src="<%=request.getRealPath("/Company/upload/")%>${company.getCom_image_filename()}"> -->
-							<img style="width:35px;height:35px;" src="/Company/upload/pizza.png">
+							<div class=opening_comimage style="flex-shrink:0;width:30px;height:30px;"> <img style="width: 35px; height: 35px;" src="<%=request.getContextPath()%>/Company/upload/${company.getCom_image_filename()}">
 							</div>
 							<div style="text-align:left;flex-shrink:1;">
 								<div class=opening_comname style="font-size:12px;font-weight:500;">${company.getCom_name()}</div>
-								<div class=opening_comfiled style="width:200px;font-size:20px;font-weight:900;">${company.getOpening_duty()}</div>
+								<div class=opening_comfiled style="width:200px;font-size:20px;font-weight:900;">${company.getOpening_subject()}</div>
 								<div class=opening_comloction style="font-size:12px;border:soild 1px black;">${company.getCom_location().substring(0,3)} </div>
 								
-								<div class=opening_comfiled style="font-size:12px;border-radius:2px;background-color:#d5e2f7;padding:2px;">${company.getCom_working_field()}<!--jobopening table 에서 가져오기 이따--></div>
+								<div class=opening_comfiled style="font-size:12px;border-radius:2px;background-color:#d5e2f7;padding:2px;">${company.getOpening_duty()}</div>
 							</div>	
 						</div>
 					</ul>

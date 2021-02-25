@@ -606,10 +606,10 @@
                     <p id="postnumWarning" style="color:red;font-size:12px;padding-left:25px;"></p>
                 </div>
                 
-                 <div class="form-group" id="divLoction">
-                    <label for="inputLoction" class="col-lg-2 control-label" >본사소재지</label>
+                 <div class="form-group" id="divLocation">
+                    <label for="inputLocation" class="col-lg-2 control-label" >본사소재지</label>
                     <div class="col-lg-10">
-                        <input name="loction" value="" type="text" class="form-control" id="loction" data-rule-required="true" placeholder="소재지" maxlength="50">
+                        <input name="location" value="" type="text" class="form-control" id="location" data-rule-required="true" placeholder="소재지" maxlength="50">
                     </div>
                    
                 </div>

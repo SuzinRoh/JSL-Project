@@ -25,6 +25,7 @@ body {
 	box-sizing: border-box;
 	border-collapse:collapse;
 }
+
 h4{
 	margin:0;
 }
@@ -299,13 +300,14 @@ ul {
 				<div class=jobopening_title>
 					<div class=jobopening_title_content>
 						<div class=companyname>
-							<h4 class=comName>${companyvo.getCom_name()}</h4>
+							<div><h4 class=comName>${vo.getCom_name()}</h4></div>
 						</div>
 						<div class="workingField">
-							<h1 class=fieldName>${jobopeningvo.getOpening_subject()}</h1>
+							<h1 class=fieldName>${vo.getOpening_subject()}</h1>
 						</div>
 					</div>
 					<div class=jobopening_apply>
+						<div><a  >회사 정보</a></div>
 						<button class=btn onclick="location.href='#'">지원하기</button>
 						<button class=btn_fav onclick="location.href='#'">
 							<i class="far fa-star" style="width: 10px;"></i>&nbsp;관심등록
@@ -328,11 +330,11 @@ ul {
 								</div>
 							</div>
 							<div class=infolistcon>
-								<div class=carrer name=carrer>${jobopeningvo.getOpening_carrer()}</div>
-								<div class=education name=education>${jobopeningvo.getOpening_education()}
+								<div class=carrer name=carrer>${vo.getOpening_carrer()}</div>
+								<div class=education name=education>${vo.getOpening_education()}
 								</div>
 								<div class=offer name=offer>
-									${jobopeningvo.getOpening_offer()}</div>
+									${vo.getOpening_offer()}</div>
 	
 							</div>
 	
@@ -347,8 +349,8 @@ ul {
 								</div>
 							</div>
 							<div class=infolistcon>
-								<div>${jobopeningvo.getOpening_salary()}</div>
-								<div>${jobopeningvo.getOpening_location()}</div>
+								<div>${vo.getOpening_salary()}</div>
+								<div>${vo.getOpening_location()}</div>
 							</div>
 						</div>
 					</div>
@@ -362,13 +364,13 @@ ul {
 							<img style="margin-left: auto; width: 50%; width: 550px;"src="/Job_opening/74882_prime_design418497_0001.jpg"> 
 						</div> 
 						<div class=contentlist>
-							<div><P class=contentslistindex>내용</P><p class=contentslistcon>${jobopeningvo.getOpening_contents()}</P></div>
-							<div><p class=contentslistindex> 정보</P><p class=contentslistcon>${companyvo.getCom_info()}</P></div>
-							<div><p class=contentslistindex>직무</P><p class=contentslistcon>${jobopeningvo.getOpening_duty()}</P></div>
-							<div><p class=contentslistindex>고용형태</P><p class=contentslistcon>${jobopeningvo.getOpening_offer()}</P></div>
-							<div><p class=contentslistindex>경력</P><p class=contentslistcon>${jobopeningvo.getOpening_carrer()}</P></div>
-							<div><p class=contentslistindex>위치</P><p class=contentslistcon>${jobopeningvo.getOpening_location()}</P></div>
-							<div ><p class=contentslistindex>연봉</P><p class=contentslistcon>${jobopeningvo.getOpening_salary()}</P></div>
+							<div><P class=contentslistindex>내용</P><p class=contentslistcon>${vo.getOpening_contents()}</P></div>
+							<div><p class=contentslistindex> 정보</P><p class=contentslistcon>${vo.getCom_info()}</P></div>
+							<div><p class=contentslistindex>직무</P><p class=contentslistcon>${vo.getOpening_duty()}</P></div>
+							<div><p class=contentslistindex>고용형태</P><p class=contentslistcon>${vo.getOpening_offer()}</P></div>
+							<div><p class=contentslistindex>경력</P><p class=contentslistcon>${vo.getOpening_carrer()}</P></div>
+							<div><p class=contentslistindex>위치</P><p class=contentslistcon>${vo.getOpening_location()}</P></div>
+							<div ><p class=contentslistindex>연봉</P><p class=contentslistcon>${vo.getOpening_salary()}</P></div>
 						</div>
 					</div>
 	
@@ -430,18 +432,18 @@ ul {
 							</div>
 						</div>
 						<div class=comapny_info_contents>
-							<div>${companyvo.getCom_name()}</div>
-							<div>${jobopeningvo.getOpening_scale()}</div>
-							<div>${companyvo.getCom_empnum()}</div>
-							<div>${companyvo.getCom_working_field()}</div>
-							<div>${companyvo.getCom_postnum()}</div>
-							<div>${companyvo.getCom_location()}</div>
-							<div>${companyvo.getCom_ceo()}</div>
-							<div>${companyvo.getCom_tel()}</div>
-							<div>${companyvo.getCom_capital()}</div>
-							<div>${companyvo.getCom_sales()}</div>
-							<div>${companyvo.getCom_email()}</div>
-							<div>${companyvo.getCom_webpage()}</div>
+							<div>${vo.getCom_name()}</div>
+							<div>${vo.getOpening_scale()}</div>
+							<div>${vo.getCom_empnum()}</div>
+							<div>${vo.getCom_working_field()}</div>
+							<div>${vo.getCom_postnum()}</div>
+							<div>${vo.getCom_location()}</div>
+							<div>${vo.getCom_ceo()}</div>
+							<div>${vo.getCom_tel()}</div>
+							<div>${vo.getCom_capital()}</div>
+							<div>${vo.getCom_sales()}</div>
+							<div>${vo.getCom_email()}</div>
+							<div>${vo.getCom_webpage()}</div>
 						</div>
 					</div>
 	
@@ -458,8 +460,8 @@ ul {
 								<div >모집종료일</div>
 							</div>
 							<div class=datecon>
-								<div id=startdate>${jobopeningvo.getOpening_startdate().substring(0,10)}</div>
-								<div id=enddate >${jobopeningvo.getOpening_enddate().substring(0,10)}</div>
+								<div id=startdate>${vo.getOpening_startdate().substring(0,10)}</div>
+								<div id=enddate >${vo.getOpening_enddate().substring(0,10)}</div>
 							</div>
 							
 						</div>
@@ -473,18 +475,17 @@ ul {
 				<div>회사 추천 리스트 보여줄것</div>
 				<c:forEach var="company" items="${list}" begin="0" end="12">
 					<ul style="list-style:none;margin:0;padding:5px;">
-						<li><div class="opening_companyInfo" onclick="location.href='/Job_opening?cmd=company_job_opening_detail&num=${company.getCom_num()}'" style="display:flex; justify-content: space-evenly;align-items: center;align-content:center;border:1px solid #e3e3e3;width:130px;height:170px;background-color: #ffffff;
+						<li><div class="opening_companyInfo" onclick="location.href='/Job_opening?cmd=company_job_opening_detail&num=${company.getOpening_num()}'" style="display:flex; justify-content: space-evenly;align-items: center;align-content:center;border:1px solid #e3e3e3;width:130px;height:170px;background-color: #ffffff;
 						text-align:center;">
 								
-							<div class=opening_comimage ><!-- <img style="width:30px;height:30px;" src="<%=request.getRealPath("/Company/upload/")%>${company.getCom_image_filename()}"> -->
-<!-- 							<img style="width:35px;height:35px;" src="/Company/upload/pizza.png"> -->
+							<div class=opening_comimage > <img style="width: 35px; height: 35px;" src="<%=request.getContextPath()%>/Company/upload/${company.getCom_image_filename()}">
 							</div>
 							<div style="text-align:center;width:150px;">
 								<div class=opening_comname style="font-size:12px;">${company.getCom_name()}</div>
-								<div class=opening_comfiled style="font-size:20px;font-weight:900;">${company.getOpening_duty()}</div>
+								<div class=opening_comfiled style="font-size:20px;font-weight:900;">${company.getOpening_subject()}</div>
 								<div class=opening_comloction style="font-size:12px;border:soild 1px black;">${company.getCom_location().substring(0,3)} </div>
 								
-								<div class=opening_comfiled style="font-size:12px;border-radius:2px;background-color:#d5e2f7;padding:2px;">${company.getCom_working_field()}<!--jobopening table 에서 가져오기 이따--></div>
+								<div class=opening_comfiled style="font-size:12px;border-radius:2px;background-color:#d5e2f7;padding:2px;">${company.getOpening_duty()}<!--jobopening table 에서 가져오기 이따--></div>
 							</div>	
 						</div>
 					</ul>

@@ -3,6 +3,7 @@ package project.domain.company;
 public class CompanyVO {
 
 	
+	
 	private int com_num;
 	private String com_name;
 	private int com_empnum;
@@ -41,10 +42,36 @@ public class CompanyVO {
 	private String opening_working_time;
 	private String opening_filename;
 	private String opening_subject;
-
+	private String opening_education;
+	
+	private int cnt;
 	
 	
 	
+	/**
+	 * @return the opening_education
+	 */
+	public String getOpening_education() {
+		return opening_education;
+	}
+	/**
+	 * @param opening_education the opening_education to set
+	 */
+	public void setOpening_education(String opening_education) {
+		this.opening_education = opening_education;
+	}
+	/**
+	 * @return the cnt
+	 */
+	public int getCnt() {
+		return cnt;
+	}
+	/**
+	 * @param cnt the cnt to set
+	 */
+	public void setCnt(int cnt) {
+		this.cnt = cnt;
+	}
 	public int getOpening_num() {
 		return opening_num;
 	}

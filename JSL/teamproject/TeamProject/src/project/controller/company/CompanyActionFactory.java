@@ -5,6 +5,7 @@ import project.service.company.CompanyDeleteAction;
 import project.service.company.CompanyDeleteProAction;
 import project.service.company.CompanyIdfoundAction;
 import project.service.company.CompanyIdfoundProAction;
+import project.service.company.CompanyInfomationAction;
 import project.service.company.CompanyLoginAction;
 import project.service.company.CompanyLoginProAction;
 import project.service.company.CompanyLogoutAction;
@@ -18,7 +19,6 @@ import project.service.companyinsert.CompanyEmailchekProAction;
 import project.service.companyinsert.CompanyIdchekAction;
 import project.service.companyinsert.CompanyInsertAction;
 import project.service.companyinsert.CompanyInsertProAction;
-import project.service.jobopening.JobOpeningDetailAction;
 
 public class CompanyActionFactory {
 	//게시판 전용 팩토리
@@ -66,6 +66,8 @@ public class CompanyActionFactory {
 			action = new CompanyDeleteAction();
 		}if(cmd.equals("company_delete_pro")) {
 			action = new CompanyDeleteProAction();
+		}if(cmd.equals("company_infomation")) {
+			action = new CompanyInfomationAction();
 		}
 				
 		return action;
