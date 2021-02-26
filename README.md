@@ -8,7 +8,7 @@
 ### Back-end 課程
 ## 学ぶ言語
 >  +  JAVA  <a href="https://github.com/SuzinRoh/jslproject/tree/main/JSL/java"> here</a>
->  +  OARCLE DATABASE
+>  +  OARCLE DATABASE <a href="https://github.com/SuzinRoh/jslproject/tree/main/JSL/db"> here</a>
 >  +  JSP/SERVLET
 >  +  SPRING FRAME WORK
 ---------------------
