@@ -1,6 +1,6 @@
 #JSP EXAMPLE DOCUMENT
 ###
-#### leaning Sequence
+#### Learned Sequence
 1. java
 2. oracle database
 3. server
