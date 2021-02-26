@@ -1,6 +1,6 @@
 #JSP EXAMPLE DOCUMENT
 ###
-#### Learned Sequence
+#### Learned order
 1. java
 2. oracle database
 3. server
