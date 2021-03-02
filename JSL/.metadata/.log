@@ -1,0 +1,449 @@
+!SESSION 2021-03-02 09:20:11.237 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_271
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/sujin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/sujin/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2021-03-02 09:20:41.705
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16|lx.astxsvc.com|*.lx.astxsvc.com|127.0.0.1:21300|*.127.0.0.1:21300 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2021-03-02 09:33:51.656
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://download.eclipse.org/releases/2020-12/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:396)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:353)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:244)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:775)
+	at sun.reflect.GeneratedMethodAccessor49.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:126)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:110)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$1.runModal(PreloadingRepositoryHandler.java:84)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:190)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2021-03-02 09:33:51.657
+!MESSAGE No repository found at https://download.eclipse.org/releases/2020-12/.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2021-03-02 09:33:51.658
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at http://download.eclipse.org/releases/latest.
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:190)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:775)
+	at sun.reflect.GeneratedMethodAccessor49.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:126)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:110)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$1.runModal(PreloadingRepositoryHandler.java:84)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:190)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://download.eclipse.org/releases/2020-12/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:396)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:353)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:244)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+	... 18 more
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1002 2021-03-02 09:33:51.658
+!MESSAGE Unable to read repository at http://download.eclipse.org/releases/latest.
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://download.eclipse.org/releases/2020-12/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:396)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:353)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:244)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:775)
+	at sun.reflect.GeneratedMethodAccessor49.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:126)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:110)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$1.runModal(PreloadingRepositoryHandler.java:84)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:190)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 org.eclipse.equinox.p2.metadata.repository 4 1000 2021-03-02 09:33:51.658
+!MESSAGE No repository found at https://download.eclipse.org/releases/2020-12/.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2021-03-02 09:39:12.649
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2021-03-02 09:39:12.649
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.649
+!MESSAGE "Buildship, Eclipse Plug-ins for Gradle - STS Gradle Migration" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.649
+!MESSAGE "Bouncy Castle Provider" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.649
+!MESSAGE "com.jcraft.jzlib" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.649
+!MESSAGE "Jakarta Annotations API" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.649
+!MESSAGE "SLF4J API Module" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.649
+!MESSAGE "ASM Tree" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.649
+!MESSAGE "Bouncy Castle PKIX, CMS, EAC, TSP, PKCS, OCSP, CMP, and CRMF APIs" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.649
+!MESSAGE "Apache Commons Compress" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2021-03-02 09:39:12.649
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.649
+!MESSAGE Software being installed: Buildship, Eclipse Plug-ins for Gradle - STS Gradle Migration 3.1.4.v20200326-1718 (org.eclipse.buildship.stsmigration 3.1.4.v20200326-1718)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.649
+!MESSAGE Software currently installed: Buildship: Eclipse Plug-ins for Gradle 3.1.3.v20191118-1057 (org.eclipse.buildship.feature.group 3.1.3.v20191118-1057)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2021-03-02 09:39:12.649
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.649
+!MESSAGE Buildship, Eclipse Plug-ins for Gradle - STS Gradle Migration 3.1.4.v20200326-1718 (org.eclipse.buildship.stsmigration 3.1.4.v20200326-1718)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.649
+!MESSAGE Buildship, Eclipse Plug-ins for Gradle - STS Gradle Migration 3.1.3.v20191118-1057 (org.eclipse.buildship.stsmigration 3.1.3.v20191118-1057)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2021-03-02 09:39:12.649
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.649
+!MESSAGE From: Buildship: Eclipse Plug-ins for Gradle 3.1.3.v20191118-1057 (org.eclipse.buildship.feature.group 3.1.3.v20191118-1057)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.649
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.buildship.stsmigration [3.1.3.v20191118-1057,3.1.3.v20191118-1057]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2021-03-02 09:39:12.680
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2021-03-02 09:39:12.680
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.680
+!MESSAGE "Buildship, Eclipse Plug-ins for Gradle - STS Gradle Migration" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.680
+!MESSAGE "Bouncy Castle Provider" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.680
+!MESSAGE "com.jcraft.jzlib" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.680
+!MESSAGE "Jakarta Annotations API" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.680
+!MESSAGE "SLF4J API Module" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.680
+!MESSAGE "ASM Tree" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.680
+!MESSAGE "Bouncy Castle PKIX, CMS, EAC, TSP, PKCS, OCSP, CMP, and CRMF APIs" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.680
+!MESSAGE "Apache Commons Compress" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2021-03-02 09:39:12.680
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.680
+!MESSAGE Software being installed: Buildship, Eclipse Plug-ins for Gradle - STS Gradle Migration 3.1.4.v20200326-1718 (org.eclipse.buildship.stsmigration 3.1.4.v20200326-1718)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.680
+!MESSAGE Software currently installed: Buildship: Eclipse Plug-ins for Gradle 3.1.3.v20191118-1057 (org.eclipse.buildship.feature.group 3.1.3.v20191118-1057)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2021-03-02 09:39:12.680
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.680
+!MESSAGE Buildship, Eclipse Plug-ins for Gradle - STS Gradle Migration 3.1.4.v20200326-1718 (org.eclipse.buildship.stsmigration 3.1.4.v20200326-1718)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.680
+!MESSAGE Buildship, Eclipse Plug-ins for Gradle - STS Gradle Migration 3.1.3.v20191118-1057 (org.eclipse.buildship.stsmigration 3.1.3.v20191118-1057)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2021-03-02 09:39:12.680
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.680
+!MESSAGE From: Buildship: Eclipse Plug-ins for Gradle 3.1.3.v20191118-1057 (org.eclipse.buildship.feature.group 3.1.3.v20191118-1057)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.680
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.buildship.stsmigration [3.1.3.v20191118-1057,3.1.3.v20191118-1057]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2021-03-02 09:39:12.819
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2021-03-02 09:39:12.819
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.819
+!MESSAGE "Buildship, Eclipse Plug-ins for Gradle - STS Gradle Migration" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.819
+!MESSAGE "Bouncy Castle Provider" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.819
+!MESSAGE "com.jcraft.jzlib" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.819
+!MESSAGE "Jakarta Annotations API" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.819
+!MESSAGE "SLF4J API Module" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.819
+!MESSAGE "ASM Tree" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.819
+!MESSAGE "Bouncy Castle PKIX, CMS, EAC, TSP, PKCS, OCSP, CMP, and CRMF APIs" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.819
+!MESSAGE "Apache Commons Compress" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2021-03-02 09:39:12.819
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.819
+!MESSAGE Software being installed: Buildship, Eclipse Plug-ins for Gradle - STS Gradle Migration 3.1.4.v20200326-1718 (org.eclipse.buildship.stsmigration 3.1.4.v20200326-1718)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.819
+!MESSAGE Software currently installed: Buildship: Eclipse Plug-ins for Gradle 3.1.3.v20191118-1057 (org.eclipse.buildship.feature.group 3.1.3.v20191118-1057)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2021-03-02 09:39:12.819
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.819
+!MESSAGE Buildship, Eclipse Plug-ins for Gradle - STS Gradle Migration 3.1.4.v20200326-1718 (org.eclipse.buildship.stsmigration 3.1.4.v20200326-1718)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.819
+!MESSAGE Buildship, Eclipse Plug-ins for Gradle - STS Gradle Migration 3.1.3.v20191118-1057 (org.eclipse.buildship.stsmigration 3.1.3.v20191118-1057)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2021-03-02 09:39:12.819
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.819
+!MESSAGE From: Buildship: Eclipse Plug-ins for Gradle 3.1.3.v20191118-1057 (org.eclipse.buildship.feature.group 3.1.3.v20191118-1057)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.819
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.buildship.stsmigration [3.1.3.v20191118-1057,3.1.3.v20191118-1057]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2021-03-02 09:39:12.821
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2021-03-02 09:39:12.821
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.821
+!MESSAGE "Buildship, Eclipse Plug-ins for Gradle - STS Gradle Migration" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.821
+!MESSAGE "Bouncy Castle Provider" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.821
+!MESSAGE "com.jcraft.jzlib" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.821
+!MESSAGE "Jakarta Annotations API" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.821
+!MESSAGE "SLF4J API Module" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.821
+!MESSAGE "ASM Tree" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.821
+!MESSAGE "Bouncy Castle PKIX, CMS, EAC, TSP, PKCS, OCSP, CMP, and CRMF APIs" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2021-03-02 09:39:12.821
+!MESSAGE "Apache Commons Compress" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2021-03-02 09:39:12.821
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.821
+!MESSAGE Software being installed: Buildship, Eclipse Plug-ins for Gradle - STS Gradle Migration 3.1.4.v20200326-1718 (org.eclipse.buildship.stsmigration 3.1.4.v20200326-1718)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.821
+!MESSAGE Software currently installed: Buildship: Eclipse Plug-ins for Gradle 3.1.3.v20191118-1057 (org.eclipse.buildship.feature.group 3.1.3.v20191118-1057)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2021-03-02 09:39:12.821
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.821
+!MESSAGE Buildship, Eclipse Plug-ins for Gradle - STS Gradle Migration 3.1.4.v20200326-1718 (org.eclipse.buildship.stsmigration 3.1.4.v20200326-1718)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.821
+!MESSAGE Buildship, Eclipse Plug-ins for Gradle - STS Gradle Migration 3.1.3.v20191118-1057 (org.eclipse.buildship.stsmigration 3.1.3.v20191118-1057)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2021-03-02 09:39:12.821
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.821
+!MESSAGE From: Buildship: Eclipse Plug-ins for Gradle 3.1.3.v20191118-1057 (org.eclipse.buildship.feature.group 3.1.3.v20191118-1057)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2021-03-02 09:39:12.821
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.buildship.stsmigration [3.1.3.v20191118-1057,3.1.3.v20191118-1057]
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2021-03-02 09:41:33.420
+!MESSAGE Connection to https://download.springsource.com/release/TOOLS/update/3.9.13.RELEASE/e4.14/plugins/com.github.jnr.posix_3.0.54.v20200501-1917.jar failed on Unexpected rethrowing. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLException: Unexpected rethrowing
+	at sun.security.ssl.Alert.createSSLException(Alert.java:127)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:325)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:296)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:291)
+	at sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1453)
+	at sun.security.ssl.SSLSocketImpl.access$400(SSLSocketImpl.java:75)
+	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:931)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:282)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:475)
+	at sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:469)
+	at sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:69)
+	at sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1228)
+	at sun.security.ssl.SSLSocketImpl.access$300(SSLSocketImpl.java:75)
+	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:915)
+	... 21 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2021-03-02 09:41:33.421
+!MESSAGE Connection to https://download.springsource.com/release/TOOLS/update/3.9.13.RELEASE/e4.14/plugins/com.github.jnr.jffi.native_1.2.23.v20200501-1917.jar failed on Unexpected rethrowing. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLException: Unexpected rethrowing
+	at sun.security.ssl.Alert.createSSLException(Alert.java:127)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:325)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:296)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:291)
+	at sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1453)
+	at sun.security.ssl.SSLSocketImpl.access$400(SSLSocketImpl.java:75)
+	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:931)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:282)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:475)
+	at sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:469)
+	at sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:69)
+	at sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1228)
+	at sun.security.ssl.SSLSocketImpl.access$300(SSLSocketImpl.java:75)
+	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:915)
+	... 21 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-03-02 09:41:33.448
+!MESSAGE An internal error occurred during: "Install download2".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:720)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:644)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:776)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:759)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-03-02 09:41:33.482
+!MESSAGE An internal error occurred during: "Install download0".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1250)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:645)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:776)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:759)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2021-03-02 09:41:33.637
+!MESSAGE An error occurred while committing the engine session for profile: epp.package.jee.
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2021-03-02 09:41:33.637
+!MESSAGE An error occurred while undoing the org.eclipse.equinox.internal.p2.engine.phases.Collect phase.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.equinox.internal.p2.engine.EngineSession.getProfileDataDirectory(EngineSession.java:81)
+	at org.eclipse.equinox.internal.p2.engine.Phase.prePerform(Phase.java:117)
+	at org.eclipse.equinox.internal.p2.engine.EngineSession.rollBackPhase(EngineSession.java:233)
+	at org.eclipse.equinox.internal.p2.engine.EngineSession.rollback(EngineSession.java:182)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:89)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:48)
+	at org.eclipse.equinox.p2.operations.ProvisioningSession.performProvisioningPlan(ProvisioningSession.java:181)
+	at org.eclipse.equinox.p2.operations.ProfileModificationJob.runModal(ProfileModificationJob.java:76)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:190)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2021-03-02 09:41:34.910 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_271
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/sujin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/sujin/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2021-03-02 09:41:47.406
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16|lx.astxsvc.com|*.lx.astxsvc.com|127.0.0.1:21300|*.127.0.0.1:21300 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2021-03-02 09:42:19.928 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_271
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/sujin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/sujin/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2021-03-02 09:42:34.640
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16|lx.astxsvc.com|*.lx.astxsvc.com|127.0.0.1:21300|*.127.0.0.1:21300 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2021-03-02 10:00:02.774 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_271
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/sujin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/sujin/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2021-03-02 10:00:10.654
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16|lx.astxsvc.com|*.lx.astxsvc.com|127.0.0.1:21300|*.127.0.0.1:21300 by an external source. This value will be overwritten using the values from the preferences
