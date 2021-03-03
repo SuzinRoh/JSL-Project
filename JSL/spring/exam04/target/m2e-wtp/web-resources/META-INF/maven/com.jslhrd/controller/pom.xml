@@ -82,7 +82,12 @@
 			</exclusions>
 			<scope>runtime</scope>
 		</dependency>
-
+		<!-- lombok  -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.18</version>
+		</dependency>
 		<!-- @Inject -->
 		<dependency>
 			<groupId>javax.inject</groupId>
