@@ -1,5 +1,6 @@
 package com.jslhrd.controller;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import org.slf4j.Logger;
@@ -45,5 +46,10 @@ public class SampleController {
 	@RequestMapping("test06")//parameter 받을떄
 	public void test06(String[] ids) {
 		log.info("String[] ids : " + Arrays.toString(ids));
+	}
+	
+	@RequestMapping("test07")//parameter 받을떄
+	public void test07(@RequestParam("ids") ArrayList<String> ids) {
+		log.info("ArrayList ids : " + ids);
 	}
 }
