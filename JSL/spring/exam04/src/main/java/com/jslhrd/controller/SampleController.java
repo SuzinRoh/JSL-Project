@@ -6,6 +6,7 @@ import java.util.Arrays;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -51,5 +52,12 @@ public class SampleController {
 	@RequestMapping("test07")//parameter 받을떄
 	public void test07(@RequestParam("ids") ArrayList<String> ids) {
 		log.info("ArrayList ids : " + ids);
+	}
+
+	@RequestMapping("test08")//parameter 받을떄
+	public void test08(Model model) {//model 전달자
+		log.info("test08() call..... " );
+		model.addAttribute("row",100);
+		model.addAttribute("name","gildong");//model 전달자
 	}
 }

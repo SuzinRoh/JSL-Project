@@ -87,11 +87,19 @@ public class JobOpeningSearchAction implements Action {
 		System.out.println(SearchQuery);
 		List<CompanyVO> list = dao.openingListSearch(SearchQuery);
 		
-		//Gson jar 필요
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("application/json");
-		String openinglist = new Gson().toJson(list);
-		response.getWriter().write(openinglist);
+		for(int i=0;i<list.size();i++){
+			CompanyVO tmp = list.get(i);
+			//System.out.println(tmp.getCom_capital());
+			if(tmp.getCom_name()== null) {
+				list.remove(i);
+			}
+			//Gson jar 필요
+			response.setCharacterEncoding("UTF-8");
+			response.setContentType("application/json");
+			String openinglist = new Gson().toJson(list);
+			response.getWriter().write(openinglist);
+		}
+		
 			
 		
 	}

@@ -8,7 +8,7 @@ public class Gmail extends Authenticator {
 	@Override
 	protected PasswordAuthentication getPasswordAuthentication() {
 		// TODO Auto-generated method stub
-		return new PasswordAuthentication("gktjsgh22@gmail.com","Alskagken!790");
+		return new PasswordAuthentication("test.suuz@gmail.com","tnwls8201test");
 	}
 	
 }

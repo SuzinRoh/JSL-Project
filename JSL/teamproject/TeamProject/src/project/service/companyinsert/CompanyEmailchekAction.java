@@ -47,28 +47,34 @@ public class CompanyEmailchekAction implements Action {
 		    
 		    String username = "test.suuz@gmail.com";         
 		    String password = "tnwls8201test";
-		    String host = "http://localhost:8086/";
+		    String host = "http://localhost:8081/";
 		    
 		    // 메일에 출력할 텍스트
 		    StringBuffer sb = new StringBuffer();
 		    sb.append("<h3>안녕하세요</h3>\n");
-		    sb.append("<h4>그만하고싶어요 ^^</h4>\n");  
+		    sb.append("<h4>이메일 인증입니다 ^^</h4>\n");  
 		    sb.append("<a href='"+host+"Company?cmd=company_emailchk_pro&id="+id+"'>이메일 인증하기</a>");   
 		    String html = sb.toString();
 
 	      
 	      // 메일 옵션 설정
 	      Properties props = new Properties();    
-	      props.put("mail.transport.protocol", "smtp");
-	      props.put("mail.smtp.host", "smtp.gmail.com");
-	      props.put("mail.smtp.port", "465");
-	      props.put("mail.smtp.auth", "true");
-	   
-	      props.put("mail.smtp.quitwait", "false");
-	      props.put("mail.smtp.socketFactory.port", "465");
-	      props.put("mail.smtp.socketFactory.class", "javax.net.tls.SSLSocketFactory");
-	      props.put("mail.smtp.socketFactory.fallback", "false");
 	      
+	      props.put("mail.smtp.host", host); //SMTP Host  
+	      props.put("mail.smtp.port", "587"); //TLS Port  
+	      props.put("mail.smtp.auth", "true"); //enable authentication  
+	      props.put("mail.smtp.starttls.enable", "true"); //enable   
+	      props.put("mail.smtp.ssl.trust", host);  
+	        
+	      //465포트        
+	      props.put("mail.smtp.host", host); 
+	      props.put("mail.smtp.port", "465"); 
+	      props.put("mail.smtp.starttls.enable","true"); 
+	      props.put("mail.smtp.auth", "true"); 
+	      props.put("mail.smtp.debug", "true"); 
+	      props.put("mail.smtp.socketFactory.port", "465"); 
+	      props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");  
+	      props.put("mail.smtp.socketFactory.fallback", "false");
 	      try {
 	        // 메일 서버  인증 계정 설정
 	        Authenticator auth = new Authenticator() {

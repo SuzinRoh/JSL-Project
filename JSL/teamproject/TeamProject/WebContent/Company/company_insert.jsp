@@ -31,12 +31,14 @@
 			
         <script type="text/javascript">
         	function nextlvl(){
-        		if(frm.provisionYn.value == "N")   {
+        		if(frm.provisionYn.value === "N")   {
         			alert("약관에 동의해주세요.");
+        			event.preventDefault();
         			return;
         		} 	
-        		if(frm.memberInfoYn.value == "N")   {
+        		if(frm.memberInfoYn.value === "N")   {
     				alert("약관에 동의해주세요.");
+    				event.preventDefault();
     				return;
     			} 
         		frm.action="/Company?cmd=company_insert&row=1";
