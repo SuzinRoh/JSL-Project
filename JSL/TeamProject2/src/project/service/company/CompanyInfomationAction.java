@@ -15,16 +15,17 @@ public class CompanyInfomationAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		
-		int num = Integer.parseInt(request.getParameter("num"));
-		CompanyDAO dao = CompanyDAO.getInstanceof();
-		 CompanyVO vo = dao.companyInfomation(num);
-		
-		
-		System.out.println("z");
+		System.out.println("company infomation action");
+		// /Company?cmd=company_infomation
+        CompanyVO vo = new CompanyVO();
+        CompanyDAO dao = CompanyDAO.getInstanceof();
+
+        int num = Integer.parseInt(request.getParameter("com_num"));
+
+        vo = dao.companyInfomation(num);
+
 		request.setAttribute("vo", vo);
-		RequestDispatcher rd = request.getRequestDispatcher("/Company/company_infomation.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/Company/company_info.jsp");
 		rd.forward(request, response);
 	}
 

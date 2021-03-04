@@ -111,7 +111,7 @@
 			
 			
 		
-		<Context docBase="exam04" path="/controller" reloadable="true" source="org.eclipse.jst.jee.server:exam04"/></Host>
+		<Context docBase="exam04" path="/" reloadable="true" source="org.eclipse.jst.jee.server:exam04"/></Host>
 		</Engine>
 	</Service>
 </Server>
