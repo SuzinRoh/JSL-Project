@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import con.jslhrd.domain.SampleVO;
@@ -112,11 +113,33 @@ public class SampleController {
 	}
 	
 	@GetMapping("test12_pro") //get 전용 mapping
-	public void test12_pro() {
-		
+	public void test12_pro() {}
+	
+	@RequestMapping("test13")//
+	public String test13() { //>> void  test13에 가지만 string 이면 경로를 찾아감
+		log.info("test13() Call.... ");
+		// 13을 호출
+		return "/sample/test13_pro"; // >>그냥경로지만  jsp file 이있으면 jsp파일이ㅣㅁ
 	}
 	
+	@GetMapping("test13_pro") //get 전용 mapping
+	public void test13_pro() {}
 	
+	
+	//리턴타임 객체 vo,dto
+	// json type 만들때 사용 javascript object nation 
+	// 속성 -값 쌍으로 구성된 데이터 ajax,xml에서 사용
+	@GetMapping("test14")//
+	public @ResponseBody SampleVO test14() { //>> void  test13에 가지만 string 이면 경로를 찾아감
+		log.info("test14() Call.... ");
+		SampleVO vo = new SampleVO();
+		vo.setName("gildong");
+		vo.setAge(20);
+		vo.setTel("010-1111-1111");
+		
+		return vo;
+	
+	}
 	
 	
 	
