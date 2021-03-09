@@ -13,29 +13,69 @@ margin:0;
 }
 .conteiner{
 	margin:0;width:100%;
+	padding-left:10%;padding-right:10%;
 	display:flex;flex-direction: column;
 }
-.infomation{
-	display: flex;flex-direction: row;justify-content: center;
-	background-color:grey;
+.company_info {
+	display: flex;
+	align-items: flex-start;
+	margin-top: 50px;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	border-top: 1px solid #f0f0f0;
+	justify-content: space-around;
+}
+
+.company_info_title {
+	padding-left: 10px;
+	padding-right: 50px;
+}
+
+.comapny_info_index, .company_info_title, .comapny_info_contents {
 	
 }
-.comapny_info_index{
-	margin:0;
+
+.comapny_info_index div, .company_info_title div, .comapny_info_contents div
+	{
+	padding: 5px;
 }
-.comapny_info_contents{
-	margin:0;
+
+.comapny_info_index {
+	color: grey;
+	padding-right: 20px;
+	font-size: 14px;
+}
+
+.comapny_info_index div {
+	/* 	text-align: right; */
+	padding-bottom: 12px;
+	border-bottom: 1px solid #e8e8e8;
+	width: 100px;
+}
+
+.comapny_info_contents {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.comapny_info_contents div {
+	padding-bottom: 12px;
+	width: 300px;
+	border-bottom: 1px solid #e8e8e8;
 }
 </style>
 <body>
 	<div class=conteiner>
 		<div> 
-			<h3>기업상세정보</h3>
+			<h1>기업상세정보</h1>
 		</div>
-
+			<div>${vo.getCom_filename()}</div>
 			<div>기업이름:${vo.getCom_name()}</div>
-			<div class="infomation">
+			<div class=company_info>
 						<!-- company contents -->
+						<div class="company_info_title">
+							<h2 style="padding: 0; margin: 0;">상세정보</h2>
+						</div>
 						<div class=comapny_info_index>
 							
 							<div>
@@ -87,7 +127,6 @@ margin:0;
 									style="font-size: 11px; color: grey; padding-right: 5px;"></i>웹사이트
 							</div>
 						</div>
-						
 						<div class=comapny_info_contents>
 							<div>${vo.getCom_name()}</div>
 							<div>${vo.getOpening_scale()}</div>
@@ -102,7 +141,6 @@ margin:0;
 							<div>${vo.getCom_email()}</div>
 							<div>${vo.getCom_webpage()}</div>
 						</div>
-						
 					</div>
 			
 			

@@ -18,8 +18,9 @@ public class CompanyInfomationAction implements Action {
 		// TODO Auto-generated method stub
 		
 		int num = Integer.parseInt(request.getParameter("num"));
+		System.out.println(num);
 		CompanyDAO dao = CompanyDAO.getInstanceof();
-		 CompanyVO vo = dao.companyInfomation(num);
+		CompanyVO vo = dao.companyInfomation(num);
 		
 		
 		System.out.println("z");

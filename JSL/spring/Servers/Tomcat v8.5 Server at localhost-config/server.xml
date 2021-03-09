@@ -111,7 +111,7 @@
 			
 			
 		
-		<Context docBase="exBoard" path="/" reloadable="true" source="org.eclipse.jst.jee.server:exBoard"/></Host>
+		<Context docBase="exPds" path="/" reloadable="true" source="org.eclipse.jst.jee.server:exPds"/></Host>
 		</Engine>
 	</Service>
 </Server>

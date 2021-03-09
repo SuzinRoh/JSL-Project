@@ -126,6 +126,8 @@
 					<li><a href="#portfolio">기업공고</a></li>
 					<li><a href="#team">Team</a></li>
 					<li><a href="/Job_opening?cmd=job_opening_list">개발자채용</a></li>
+					<c:set var="company" value="${list}"/>
+					<li><a href="/Company?cmd=company_infomation&num=${company.getCom_num}">상세공고</a></li>
           <li class="drop-down"><a href="">Drop Down</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>

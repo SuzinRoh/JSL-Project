@@ -16,4 +16,5 @@
     <fullyQualifiedTypeName name="com.jslhrd.service.BoardServiceImpl"/>
     <fullyQualifiedTypeName name="org.slf4j.Logger"/>
     <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
 </qualifiedTypeNameHistroy>
