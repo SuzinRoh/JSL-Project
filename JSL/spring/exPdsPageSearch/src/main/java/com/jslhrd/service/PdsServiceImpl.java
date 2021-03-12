@@ -64,9 +64,9 @@ public class PdsServiceImpl implements PdsService {
 		
 	}
 	
-	
+	/*
 	@Override
 	public List<PdsVO> pdsListSearch(PageVO pg){
 		
-	}
+	}*/
 }
