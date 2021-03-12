@@ -9,6 +9,13 @@
      td.content { padding:10px; line-height:1.6em; text-align:justify; }
      a.list { text-decoration:none;color:black;font-size:10pt; }
    </style>
+   <script>
+   function pds_del(){
+	   
+	   var url="pds_delete_pro?idx=${pds.idx}";
+	   window.open(url,"pds_delete","width=300,height=200");
+   }
+   </script>
  </head>
 
    <!--DB에서 검색한 자료를 화면에 출력  -->
@@ -24,7 +31,7 @@
        &nbsp;<br>
      <table border="0" width="90%" align="center">
        <tr>
-         <td colspan="2"><img src="./img/bullet-01.gif"> 
+         <td colspan="2"><img src="/img/bullet-01.gif"> 
            <font color="blue" size="3">참 좋은 자료실</font><font size="2"> - 자료읽기</font></td>
        </tr>
      </table>
@@ -33,7 +40,7 @@
      <table border="0" width="90%" align="center" cellspacing="0" style="border-width:1px;border-color:#0066cc;border-style:outset;">
        <tr bgcolor="e3e9ff">
          <td class="title">
-           <img src="./img/bullet-04.gif">   
+           <img src="/img/bullet-04.gif">   
            <font size="2" face="돋움">${pds.subject}
            </font></td></tr>
   <tr>  
@@ -52,7 +59,8 @@
  <a href="pds_modify?idx=${idx}"><img src="/img/edit-1.gif" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;
  <a href=""><img src="/img/del.gif" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;
  <a href="pds_list"><img src="/img/list-2.gif" border="0"></a>
- <a href="pds_write"><img src="/img/write.gif" border="0"></a></font></td></tr>  
+ <a href="pds_write"><img src="/img/write.gif" border="0"></a>
+ <a href="javascript:pds_del()"><img src="/img/del.gif" border="0"></a></font></td></tr>  
 </table>  
 </body>  
 </html>

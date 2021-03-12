@@ -34,4 +34,9 @@
 	<update id="pdsModify">
 		update tbl_pds set email=#{email} ,subject=#{subject},contents=#{contents},filename=#{filename} where idx = #{idx} and pass = #{pass}
 	</update>
+	
+	<!-- delete  -->
+	<delete id="pdsDelete">
+		delete from tbl_pds where idx=#{idx} and pass=#{pass}
+	</delete>
 </mapper>

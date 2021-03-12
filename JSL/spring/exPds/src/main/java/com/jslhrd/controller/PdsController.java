@@ -1,5 +1,7 @@
 package com.jslhrd.controller;
 
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.request;
+
 import java.io.File;
 
 import javax.servlet.http.Cookie;
@@ -12,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -50,6 +53,32 @@ public class PdsController {
 	public void pdsWrite() {
 		log.info("Controller pdsWrite : ");
 	}
+	/*
+	// 등록 처리
+	@PostMapping("pds_write")
+	public String pdsWritePro(MultipartHttpServletRequest request) {
+		log.info("Controller pdsWritePro : ");
+		PdsVO vo = new PdsVO();
+		vo.setName(request.getParameter("name"));
+		vo.setPass(request.getParameter("pass"));
+		vo.setEmail(request.getParameter("email"));
+		vo.setSubject(request.getParameter("subject"));
+		vo.setContents(request.getParameter("contents"));
+		
+		MultipartFile mf = request.getFile("filename");
+		// 업로드 경로 설정
+		String path=request.getRealPath("/resources/upload/");
+		String fileName=mf.getOriginalFilename();
+		File file=new File(path+fileName);
+		try {
+			mf.transferTo(file);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		vo.setFilename(fileName);
+		service.pdsWrite(vo);
+		return "redirect:/Pds/pds_list";// 매핑정보
+	}*/
 	
 	// 등록 처리
 	@PostMapping("pds_write")
@@ -156,4 +185,66 @@ public class PdsController {
 		
 		model.addAttribute("pds", service.pdsSelect(idx));
 	}
+	
+	//수정처리
+		@PostMapping("pds_modify")
+		public String pdsModifyPro(MultipartHttpServletRequest request) {
+			log.info("Controller pdsModifyPro : ");
+			PdsVO vo = new PdsVO();
+			vo.setIdx(Integer.parseInt(request.getParameter("idx")));
+			vo.setName(request.getParameter("name"));
+			vo.setPass(request.getParameter("pass"));
+			vo.setEmail(request.getParameter("email"));
+			vo.setSubject(request.getParameter("subject"));
+			vo.setContents(request.getParameter("contents"));
+			String oldfilename = request.getParameter("oldfilename");
+			
+			MultipartFile mf = request.getFile("filename");
+			// 업로드 경로 설정
+			String path=request.getRealPath("/resources/upload/");
+			
+			String fileName=mf.getOriginalFilename();
+			if(fileName.equals("")) {
+				vo.setFilename(oldfilename);
+			}else {
+				File newFile=new File(path+fileName);
+				File oldFile=new File(path+oldfilename);
+				try {
+					if(oldFile.exists()) {
+						oldFile.delete();// 파일삭제
+					}
+					mf.transferTo(newFile);
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
+				vo.setFilename(fileName);
+			}
+			service.pdsModify(vo);
+			return "redirect:/Pds/pds_list";// 매핑정보
+		}
+	
+	//삭제 폼
+	@GetMapping("pds_delete")
+	public void pdsDelete(@ModelAttribute("idx") int idx ) {//받아서 바로 전송할때 씀 받기,보내기 둘다 ok
+		log.info("Controller pdsDelete : ");
+	}
+	
+	//삭제처리
+	@PostMapping("pds_delete_pro")
+	public void pdsDeletePro(PdsVO vo , Model model, HttpServletRequest reqeust) {
+		log.info("Controller pdsDelete pro : ");
+		PdsVO pds = service.pdsSelect(vo.getIdx());
+		int row =service.pdsDelete(vo);
+		if(row == 1 ) {
+			if(pds.getFilename() != null ) {
+				File file = new File(reqeust.getRealPath("/resource/upload/")+pds.getFilename());
+				file.delete();
+			}
+		}
+		model.addAttribute("row" , row);
+	}
+	
+	
+	
+	
 }

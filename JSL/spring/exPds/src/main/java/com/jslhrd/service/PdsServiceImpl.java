@@ -48,4 +48,11 @@ public class PdsServiceImpl implements PdsService {
 	public int pdsModify(PdsVO vo) {
 		return mapper.pdsModify(vo);
 	}
+	
+	//delete 
+	@Override
+	public int pdsDelete(PdsVO vo){
+		return mapper.pdsDelete(vo);
+		
+	}
 }

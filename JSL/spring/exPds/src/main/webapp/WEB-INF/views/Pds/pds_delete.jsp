@@ -3,8 +3,20 @@
 <html>
 <head><title>자료 삭제</title>
 <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+<script type="text/javascript">
+	function send(){
+		if(pds.pass.value==""){
+			alert("password!");
+			pds.pass.focus();
+			return;
+		}
+		pds.submit();
+	}
+</script>
 </head>
 <body>
+<form name="pds" method=post action=pds_delete>
+<input type="hidden" name="idx" value="${idx}">
   <table border="0" cellpadding="0" cellspacing="0" width="300" align="center">
   <tr>
     <td height="50">
@@ -16,8 +28,9 @@
   <tr>
     <td valign="middle" height="40">
     <font size="2" face="돋움">비밀번호 <input type="password" name="pass" size="8"></font>
-    <input type="submit" value="삭제">
-    <input type="button" value="닫기"> </td></tr>
+    <input type=button value="삭제" onClick="send()">
+    <input type="button" value="닫기" onClisck="self.close"> </td></tr>
   </table>
+  </form>
 </body>
 </html>
