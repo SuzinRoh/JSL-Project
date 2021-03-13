@@ -34,11 +34,16 @@ public class HomeController {
 		model.addAttribute("serverTime", formattedDate );
 		
 		return "home";
-	}*/
+	}
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home() {
 		return "redirect:Main/index";
 	}
+	*/
 	
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String home() {
+		return "index";
+	}
 }

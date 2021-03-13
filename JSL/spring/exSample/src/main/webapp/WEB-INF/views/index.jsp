@@ -12,13 +12,13 @@
    </style>
 
  </head>
- <%@ include file="../Include/topmenu.jsp" %>
+ <%@ include file="./Include/topmenu.jsp" %>
  <body topmargin="0" leftmargin="0">
    <table border="0" width="800">
      <tr>
        <td width="20%"  height="500" bgcolor="#ecf1ef" valign="top">
 			왼쪽 메뉴
-			 <%@ include file="../Include/login_form.jsp" %>
+			 <%@ include file="./Include/login_form.jsp" %>
 		 <!--  다음에 추가할 부분 -->
 	
 	   </td>
@@ -168,6 +168,6 @@
   </table>
   </body>
   </html>
- <%@ include file="../Include/copyright.jsp" %>
+ <%@ include file="./Include/copyright.jsp" %>
  
 

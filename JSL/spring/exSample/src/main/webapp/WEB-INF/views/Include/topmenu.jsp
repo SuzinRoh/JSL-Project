@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <html>
  <head><title>Web Programming Test</title>
@@ -20,6 +20,7 @@
        </b></font>
      </td>
      <td bgcolor="#9966ff" width="10%" height="25" onmouseover="style.backgroundColor='#2772D3'" onmouseout="style.backgroundColor=''">
+    <!-- include c if after add session -->
      <p align="center"><font color="white" size="2"><b><a href="" class="white">로그인</A></b></font></p>
      <p align="center"><font color="white" size="2"><b><a href="" class="white">로그아웃</A></b></font></p>
      </td>
@@ -31,7 +32,7 @@
      <p align="center"><font color="white" size="2"><b>공지사항</b></font></p>
      </td>
      <td bgcolor="#9966ff" width="10%" onmouseover="style.backgroundColor='#2772D3'" onmouseout="style.backgroundColor=''">
-     <p align="center"><font color="white" size="2"><b>게시판</b></font></p>
+     <p align="center"><font color="white" size="2"><b><a href="Board/board_list">게시판</a></b></font></p>
      </td>
      <td bgcolor="#9966ff" width="10%" onmouseover="style.backgroundColor='#2772D3'" onmouseout="style.backgroundColor=''">
      <p align="center"><font color="white" size="2"><b><a href="" class="white">자료실</a></b></font></p>
@@ -59,6 +60,7 @@
      <form action="" method="post">
      <td colspan="5">
      <p>&nbsp;
+     
        <Select name="genre" size="1">
          <option value="종합">공지사항
          <option value="종합">게시판

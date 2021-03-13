@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	 
+<mapper namespace="com.jslhrd.mapper.BoardMapper">
+
+
+	<select id="boardCount" resultType="int">
+		select count(*) from tbl_board
+	</select>
+	
+	<select id="boardList" resultType="com.jslhrd.domain.BoardVO" >
+		select * from tbl_board order by idx desc
+	</select>
+	
+	
+</mapper>
+	 
